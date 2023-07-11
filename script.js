@@ -45,15 +45,15 @@ function printGrid() {
         row.classList.add("row"); 
         row.classList.add("justify-content-center"); 
         row.classList.add("align-content-center");
-        
+
         // Invocazione proprietà
         let cols = creaColonne(colNumber, "size-easy");
         row.innerHTML = cols;
         app.append(row);
     }
 
-//CONDIZIONE CHE STAMPA LA GRIGLIA MEDIA
-else if (diffSelect.options[diffSelect.selectedIndex].value === "2") {
+    //CONDIZIONE CHE STAMPA LA GRIGLIA MEDIA
+    else if (diffSelect.options[diffSelect.selectedIndex].value === "2") {
     // Column number
     let colNumber = 81;
 
