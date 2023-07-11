@@ -23,7 +23,7 @@ function printGrid() {
     if (diffSelect.options[diffSelect.selectedIndex].value === "1") {
         let colNumber = 100;
         let colRow = Math.sqrt(colNumber);
-        
+
         let app = document.getElementById("app");
         app.classList.add("class"); 
         app.classList.add("container"); 
