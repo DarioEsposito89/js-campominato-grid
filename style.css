@@ -61,3 +61,8 @@ main {
     background-color: #6495ED;
     color: white;
 }
+
+footer {
+    height: 60px;
+    line-height: 60px;
+}
