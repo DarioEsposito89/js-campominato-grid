@@ -44,7 +44,62 @@ function printGrid() {
         row.innerHTML = cols;
         app.append(row);
     }
+
+//CONDIZIONE CHE STAMPA LA GRIGLIA MEDIA
+else if (diffSelect.options[diffSelect.selectedIndex].value === "2") {
+    let colNumber = 81;
+    let colRow = Math.sqrt(colNumber) +1;
+
+    let app = document.getElementById("app");
+    app.classList.add("class"); 
+    app.classList.add("container"); 
+    app.classList.add("h-100"); 
+    app.classList.add("d-flex"); 
+    app.classList.add("justify-content-center"); 
+    app.classList.add("align-items-center"); 
+    app.classList.add("align-content-center");
+
+    app.innerHTML = "";
+
+    let row = document.createElement("div");
+    row.classList.add("class")
+    row.classList.add("row"); 
+    row.classList.add("justify-content-center"); 
+    row.classList.add("align-content-center");
+
+    let cols = creaColonne(colNumber, "size-medium");
+    row.innerHTML = cols;
+    app.append(row);
+    }
+
+    else if (diffSelect.options[diffSelect.selectedIndex].value === "3") {
+        let colNumber = 49;
+        let colRow = Math.sqrt(colNumber);
+    
+        let app = document.getElementById("app");
+        app.classList.add("class"); 
+        app.classList.add("container"); 
+        app.classList.add("h-100"); 
+        app.classList.add("d-flex"); 
+        app.classList.add("justify-content-center"); 
+        app.classList.add("align-items-center"); 
+        app.classList.add("align-content-center");
+    
+        app.innerHTML = "";
+    
+        let row = document.createElement("div");
+        row.classList.add("class")
+        row.classList.add("row"); 
+        row.classList.add("justify-content-center"); 
+        row.classList.add("align-content-center");
+    
+        let cols = creaColonne(colNumber, "size-hard");
+        row.innerHTML = cols;
+        app.append(row);
+        }
 }
+
+
 
 // FUNZIONE CHE CREA LE COLONNE
 function creaColonne(numerocolonne, dimensione) {
@@ -61,3 +116,4 @@ function creaColonne(numerocolonne, dimensione) {
     }
     return cols;
 }
+
