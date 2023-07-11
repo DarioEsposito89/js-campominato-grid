@@ -13,3 +13,51 @@
 // - con “difficile” => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 
 let diffSelect = document.getElementById("difficulty");
+
+document.getElementById("button").addEventListener("click", printGrid);
+
+// FUNZIONE CHE STAMPA LA GRIGLIA
+function printGrid() {
+    
+    //CONDIZIONE CHE STAMPA LA GRIGLIA FACILE
+    if (diffSelect.options[diffSelect.selectedIndex].value === "1") {
+        let colNumber = 100;
+        let colRow = Math.sqrt(colNumber);
+        
+        let app = document.getElementById("app");
+        app.classList.add("class"); 
+        app.classList.add("container"); 
+        app.classList.add("h-100"); 
+        app.classList.add("d-flex"); 
+        app.classList.add("justify-content-center"); 
+        app.classList.add("align-items-center"); 
+        app.classList.add("align-content-center");
+
+        app.innerHTML = "";
+
+        let row = document.createElement("div");
+        row.classList.add("class")
+        row.classList.add("row"); 
+        row.classList.add("justify-content-center"); 
+        row.classList.add("align-content-center");
+        let cols = creaColonne(colNumber, "size-easy");
+        row.innerHTML = cols;
+        app.append(row);
+    }
+}
+
+// FUNZIONE CHE CREA LE COLONNE
+function creaColonne(numerocolonne, dimensione) {
+    let cols = "";
+    let numeriusati = [];
+    let index = 1;
+    while (numeriusati.length < numerocolonne) {
+        let numeroCella = index;
+        if (!numeriusati.includes(numeroCella)) {
+        numeriusati.push(numeroCella);
+        cols += `<div id="${numeroCella}" onclick="myFunction(${numeroCella})" class="box ${dimensione} black-border text-center">${numeroCella}</div>`;
+        }
+        index++;
+    }
+    return cols;
+}

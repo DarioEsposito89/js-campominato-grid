@@ -1,0 +1,36 @@
+body {
+    height: 100vh;
+}
+
+header {
+    height: 80px;
+    line-height: 80px;
+}
+
+.left-header>h1 {
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+main {
+    height: calc(100vh - 140px);
+    background-color: #7FFFD4;
+}
+
+.container>.row {
+    width: 400px;
+    height: 400px;
+    --bs-gutter-x: 0 !important;
+}
+
+.size-easy {
+    width: 10%;
+    height: 10%;
+    line-height: 40px;
+}
+
+
+.black-border {
+    border: 1px solid black;
+}
+
