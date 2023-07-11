@@ -12,8 +12,10 @@
 // - con “medio” => 81 caselle, con un numero compreso tra 1 e 81, divise in 9 caselle per 9 righe;
 // - con “difficile” => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 
+// Dichiarazione variabile, recuperando ID dall'HTML
 let diffSelect = document.getElementById("difficulty");
 
+// BUTTON addEventListener
 document.getElementById("button").addEventListener("click", printGrid);
 
 // FUNZIONE CHE STAMPA LA GRIGLIA
@@ -21,7 +23,10 @@ function printGrid() {
     
     //CONDIZIONE CHE STAMPA LA GRIGLIA FACILE
     if (diffSelect.options[diffSelect.selectedIndex].value === "1") {
+        // Column number
         let colNumber = 100;
+        
+        // Row number
         let colRow = Math.sqrt(colNumber);
 
         let app = document.getElementById("app");
@@ -40,6 +45,8 @@ function printGrid() {
         row.classList.add("row"); 
         row.classList.add("justify-content-center"); 
         row.classList.add("align-content-center");
+        
+        // Invocazione proprietà
         let cols = creaColonne(colNumber, "size-easy");
         row.innerHTML = cols;
         app.append(row);
@@ -47,7 +54,10 @@ function printGrid() {
 
 //CONDIZIONE CHE STAMPA LA GRIGLIA MEDIA
 else if (diffSelect.options[diffSelect.selectedIndex].value === "2") {
+    // Column number
     let colNumber = 81;
+
+    // Row number
     let colRow = Math.sqrt(colNumber) +1;
 
     let app = document.getElementById("app");
@@ -67,13 +77,17 @@ else if (diffSelect.options[diffSelect.selectedIndex].value === "2") {
     row.classList.add("justify-content-center"); 
     row.classList.add("align-content-center");
 
+    // Invocazione proprietà
     let cols = creaColonne(colNumber, "size-medium");
     row.innerHTML = cols;
     app.append(row);
     }
 
     else if (diffSelect.options[diffSelect.selectedIndex].value === "3") {
+        // Column number
         let colNumber = 49;
+
+        // Row number
         let colRow = Math.sqrt(colNumber);
     
         let app = document.getElementById("app");
@@ -92,7 +106,8 @@ else if (diffSelect.options[diffSelect.selectedIndex].value === "2") {
         row.classList.add("row"); 
         row.classList.add("justify-content-center"); 
         row.classList.add("align-content-center");
-    
+        
+        // Invocazione proprietà
         let cols = creaColonne(colNumber, "size-hard");
         row.innerHTML = cols;
         app.append(row);
