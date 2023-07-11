@@ -21,6 +21,7 @@ main {
     width: 400px;
     height: 400px;
     --bs-gutter-x: 0 !important;
+    aspect-ratio: 1/1;
 }
 
 .size-easy {
@@ -29,13 +30,23 @@ main {
     line-height: 40px;
 }
 
+.size-medium {
+    display: flex;
+    flex-basis: calc(100% / 9);
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+}
+
+.size-hard {
+    display: flex;
+    flex-basis: calc(100% / 7);
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+}
+
 
 .black-border {
     border: 1px solid black;
-}
-
-.size-medium {
-    width: calc(400px / 9);
-    height: calc(400px / 9);
-    line-height: calc(400px / 9);
 }
