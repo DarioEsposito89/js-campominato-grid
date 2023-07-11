@@ -52,3 +52,12 @@ main {
 .black-border {
     border: 1px solid black;
 }
+
+.box {
+    cursor: pointer;
+}
+
+.bg-blue {
+    background-color: #6495ED;
+    color: white;
+}
