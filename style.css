@@ -2,6 +2,7 @@ body {
     height: 100vh;
 }
 
+/* -------------- HEADER ------------------ */
 header {
     height: 80px;
     line-height: 80px;
@@ -12,6 +13,7 @@ header {
     margin-left: 20px;
 }
 
+/* -------------- MAIN ------------------ */
 main {
     height: calc(100vh - 140px);
     background-color: #7FFFD4;
@@ -24,6 +26,7 @@ main {
     aspect-ratio: 1/1;
 }
 
+/* -------------- GRID DIFFICULT ------------------ */
 .size-easy {
     display: flex;
     flex-basis: calc(100% / 10);
@@ -62,6 +65,7 @@ main {
     color: white;
 }
 
+/* -------------- FOOTER ------------------ */
 footer {
     height: 60px;
     line-height: 60px;
