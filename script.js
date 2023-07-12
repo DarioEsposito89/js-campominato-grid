@@ -116,7 +116,7 @@ function printGrid() {
 
 
 
-// FUNZIONE CHE CREA LE COLONNE
+// FUNZIONE CHE CREA I QUADRATI
 function createSquare(numerocolonne, dimensione) {
     let square = "";
     let numeriusati = [];
