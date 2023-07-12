@@ -47,7 +47,7 @@ function printGrid() {
         row.classList.add("align-content-center");
 
         // Invocazione proprietà
-        let cols = creaColonne(colNumber, "size-easy");
+        let square = creaColonne(colNumber, "size-easy");
         row.innerHTML = square;
         app.append(row);
     }
@@ -78,7 +78,7 @@ function printGrid() {
     row.classList.add("align-content-center");
 
     // Invocazione proprietà
-    let cols = creaColonne(colNumber, "size-medium");
+    let square = creaColonne(colNumber, "size-medium");
     row.innerHTML = square;
     app.append(row);
     }
@@ -108,7 +108,7 @@ function printGrid() {
         row.classList.add("align-content-center");
         
         // Invocazione proprietà
-        let cols = creaColonne(colNumber, "size-hard");
+        let square = creaColonne(colNumber, "size-hard");
         row.innerHTML = square;
         app.append(row);
         }
