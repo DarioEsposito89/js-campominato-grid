@@ -135,5 +135,5 @@ function creaColonne(numerocolonne, dimensione) {
 // FUNZIONE CHE CAMBIA BACKGROUND AL CLICK
 function myFunction(casella) {
     console.log(casella);
-    document.getElementById(casella).classList.add("bg-blue");
+    document.getElementById(casella).classList.toggle("bg-blue");
     }
