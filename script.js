@@ -48,7 +48,7 @@ function printGrid() {
 
         // Invocazione proprietà
         let cols = creaColonne(colNumber, "size-easy");
-        row.innerHTML = cols;
+        row.innerHTML = square;
         app.append(row);
     }
 
@@ -79,7 +79,7 @@ function printGrid() {
 
     // Invocazione proprietà
     let cols = creaColonne(colNumber, "size-medium");
-    row.innerHTML = cols;
+    row.innerHTML = square;
     app.append(row);
     }
 
@@ -109,7 +109,7 @@ function printGrid() {
         
         // Invocazione proprietà
         let cols = creaColonne(colNumber, "size-hard");
-        row.innerHTML = cols;
+        row.innerHTML = square;
         app.append(row);
         }
 }
@@ -118,18 +118,18 @@ function printGrid() {
 
 // FUNZIONE CHE CREA LE COLONNE
 function creaColonne(numerocolonne, dimensione) {
-    let cols = "";
+    let square = "";
     let numeriusati = [];
     let index = 1;
     while (numeriusati.length < numerocolonne) {
         let numeroCella = index;
         if (!numeriusati.includes(numeroCella)) {
         numeriusati.push(numeroCella);
-        cols += `<div id="${numeroCella}" onclick="myFunction(${numeroCella})" class="box ${dimensione} black-border text-center">${numeroCella}</div>`;
+        square += `<div id="${numeroCella}" onclick="myFunction(${numeroCella})" class="box ${dimensione} black-border text-center">${numeroCella}</div>`;
         }
         index++;
     }
-    return cols;
+    return square;
 }
 
 // FUNZIONE CHE CAMBIA BACKGROUND AL CLICK
