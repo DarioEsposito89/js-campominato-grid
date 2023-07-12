@@ -47,7 +47,7 @@ function printGrid() {
         row.classList.add("align-content-center");
 
         // Invocazione proprietà
-        let square = creaColonne(colNumber, "size-easy");
+        let square = createSquare(colNumber, "size-easy");
         row.innerHTML = square;
         app.append(row);
     }
@@ -78,7 +78,7 @@ function printGrid() {
     row.classList.add("align-content-center");
 
     // Invocazione proprietà
-    let square = creaColonne(colNumber, "size-medium");
+    let square = createSquare(colNumber, "size-medium");
     row.innerHTML = square;
     app.append(row);
     }
@@ -108,7 +108,7 @@ function printGrid() {
         row.classList.add("align-content-center");
         
         // Invocazione proprietà
-        let square = creaColonne(colNumber, "size-hard");
+        let square = createSquare(colNumber, "size-hard");
         row.innerHTML = square;
         app.append(row);
         }
@@ -117,7 +117,7 @@ function printGrid() {
 
 
 // FUNZIONE CHE CREA LE COLONNE
-function creaColonne(numerocolonne, dimensione) {
+function createSquare(numerocolonne, dimensione) {
     let square = "";
     let numeriusati = [];
     let index = 1;
